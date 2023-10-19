@@ -6,5 +6,48 @@
     "plutusVersion": "v2",
     "license": "Apache-2.0"
   },
-  "validators": []
+  "validators": [
+    {
+      "title": "increment.increment",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/increment~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "_r",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "59018a01000032323232323232323222232325333008323232323232323232325333015301800213253330133370e90021809000899191919b87337006eb4c038c05004d2002375a601c6028004601e002603200260220022c600660200022c602c0026644646600200200644a66602e002297ae0132325333016300500213301a00233004004001133004004001301b002301900137586002601c6010601c016466ebcc024c03c00400c8c054c058c058004c04c004c02c004c044004c044004c020004c94ccc028cdc3a400460120022646464a66601a66e1d2000300c00113012300b001163322323300100100322533301300114c103d87a8000132325333012300500213374a90001980b00125eb804cc010010004c05c008c054004dd61802180518021805003919baf3005300b0010023010001300800116300e300f30070042300e001149858c0040108c94ccc020cdc3a400000226464a66601a60200042930b1bad300e0013006002163006001230053754002460066ea80055cd2ab9d5573caae7d5d02ba157441",
+      "hash": "1091f88bcf4ee6294a9e00cdb3ded8a6f08cb414b1ccbea68ba17146"
+    }
+  ],
+  "definitions": {
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "increment/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "id",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    }
+  }
 }

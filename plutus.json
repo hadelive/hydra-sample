@@ -1,0 +1,10 @@
+{
+  "preamble": {
+    "title": "aiken-lang/hydra-sample",
+    "description": "Aiken contracts for project 'aiken-lang/hydra-sample'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "license": "Apache-2.0"
+  },
+  "validators": []
+}
